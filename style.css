@@ -1,7 +1,7 @@
 :root {
     --background: #fff8da;
     --text: #a06262;
-    --text2: #784949;
+    --text2: #874949;
     --floatingThingWidth: 2.5vw;
     --floatingThingHeight: 2.5vw;
 }
@@ -12,14 +12,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 100vh;
     background: var(--background);
     color: var(--text);
     font-family: Roboto, sans-serif;
     overflow: hidden;
     position: relative;
-    border-top: 5vh solid var(--text);
-    border-bottom: 5vh solid var(--text);
+    border-top: 2vh solid var(--text);
+    border-bottom: 2vh solid var(--text);
     box-sizing: border-box;
 }
 
@@ -46,37 +47,30 @@ body:after {
 }
 
 h1  {
-    font-size: 20vw;
     margin: 0 0 2vw;
     transition: transform  ease-out 0.2s;
     user-select: none;
     position: relative;
-    white-space: nowrap;
     z-index: 1;
+    font-size: 2.5vw;
 }
 
-h1:hover {
-    transform: scale(0.9);
+h2 {
+    font-size: 10vw;
+    text-transform: capitalize;
+    color: var(--text2);
+    text-align: center;
+    animation: fadeIn 0.25s forwards;
 }
 
-h1:after {
-    position: absolute;
-    height: var(--floatingThingHeight);
-    width: var(--floatingThingWidth);
-    top: 69%;
-    left: 100%;
-    background: var(--text2);
-    content: " ";
-    animation: frup 4s cubic-bezier(.72,1.03,.60,.48) infinite 2s;
-    z-index: -1;
-}
-
-@keyframes frup {
+@keyframes fadeIn {
     0% {
-            transform:translate(calc(-100vw - var(--floatingThingWidth) * 2)) scale3d(1,1,1);
+        opacity: 0;
+        transform: scale3d(1.5, 1.5, 1);
     }
 
     100% {
-            transform:translate(var(--floatingThingWidth)) scale3d(1,1,1);
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
     }
 }
