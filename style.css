@@ -61,6 +61,11 @@ h2 {
     text-transform: capitalize;
     color: var(--text2);
     text-align: center;
+    opacity: 0;
+}
+
+
+.active {
     animation: fadeIn 0.25s forwards;
 }
 

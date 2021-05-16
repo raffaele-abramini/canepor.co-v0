@@ -7,6 +7,7 @@ const init = async () => {
   const elem = document.getElementById("target");
 
   elem.innerText = args.join(" ")
+  elem.classList.add("active")
 };
 
 
