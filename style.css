@@ -22,6 +22,7 @@ body {
     border-top: 2vh solid var(--text);
     border-bottom: 2vh solid var(--text);
     box-sizing: border-box;
+    width: 100vw;
 }
 
 body:before {
