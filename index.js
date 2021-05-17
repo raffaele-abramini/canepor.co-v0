@@ -10,12 +10,14 @@ const fetchAndPopulate = async (target) => {
 
 const init = async () => {
   const target = document.getElementById("target");
-  const button = document.getElementById("button")
+  const button = document.getElementById("button");
 
   button.addEventListener("click", async () => {
     target.classList.remove("active")
     button.disabled = true;
     await fetchAndPopulate(target);
+    await new Promise(r => setTimeout(r, 1000))
+    button.disabled = false;
   })
   await fetchAndPopulate(target);
 };

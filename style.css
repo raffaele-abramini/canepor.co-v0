@@ -3,6 +3,7 @@
     --text: #292823;
     --textAccent: #DB777B;
     --textSecondary: #7f9291;
+    --textSecondaryWeak: #a2b1b0;
 }
 
 
@@ -67,11 +68,18 @@ button  {
     animation: fadeInButton 0.2s 2s forwards;
     color: var(--textSecondary);
     opacity: 0;
+    pointer-events: none;
 }
 
-button:hover {
+button:hover:not(:disabled) {
     border-color: var(--text);
     color: var(--text);
+}
+
+button:disabled {
+    color: var(--textSecondaryWeak);
+    border-color: var(--textSecondaryWeak);
+    cursor: not-allowed;
 }
 
 .active {
@@ -96,5 +104,6 @@ button:hover {
 
     100% {
         opacity: 1;
+        pointer-events: auto;
     }
 }
