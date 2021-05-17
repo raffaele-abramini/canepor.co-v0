@@ -11,20 +11,20 @@ body {
     margin: 0;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: column-reverse;
-    height: 100vh;
+    min-height: 100vh;
     background: var(--background);
     color: var(--text);
     font-family: Roboto, sans-serif;
     box-shadow:  0 1vh 0 0 var(--background) inset, 0 2vh 0 0 var(--text) inset, 0 3vh 0 0 var(--background) inset, 0 5vh 0 0 var(--text) inset,
     0 -1vh 0 0 var(--background) inset, 0 -2vh 0 0 var(--text) inset, 0 -3vh 0 0 var(--background) inset, 0 -5vh 0 0 var(--text) inset;
-    width: 100vw;
+    overflow-x: hidden;
 }
 
 
 h1  {
-    margin: 10vh 0 0;
+    margin: 15vh 0 0;
     user-select: none;
     position: relative;
     z-index: 1;
@@ -36,6 +36,7 @@ h1  {
     text-align: center;
     line-height: 1.5;
     order: 1;
+    background: var(--background);
 }
 
 h1 span {
@@ -60,6 +61,7 @@ button  {
     appearance: none;
     border: 2px solid var(--textSecondary);
     padding: 1vh 2vw;
+    margin-top: 7.5vh;
     text-transform: uppercase;
     font-family: 'Arvo', serif;
     background: none;
