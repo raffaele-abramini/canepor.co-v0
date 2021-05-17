@@ -54,22 +54,24 @@ h2 {
 }
 
 button  {
-    margin-top: -12.5vh;
+    margin-top: -10vh;
     order: 2;
     appearance: none;
-    border: 3px solid var(--textSecondary);
+    border: 2px solid var(--textSecondary);
     padding: 1vh 2vw;
     text-transform: uppercase;
     font-family: 'Arvo', serif;
     background: none;
     cursor: pointer;
-    transition: border-color 0.2s;
-    animation: fadeInButton 0.5s 3s forwards;
+    transition: border-color 0.2s, color 0.2s;
+    animation: fadeInButton 0.2s 2s forwards;
+    color: var(--textSecondary);
     opacity: 0;
 }
 
 button:hover {
     border-color: var(--text);
+    color: var(--text);
 }
 
 .active {
