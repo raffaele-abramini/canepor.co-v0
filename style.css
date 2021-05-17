@@ -1,9 +1,8 @@
 :root {
-    --background: #fff8da;
-    --text: #a06262;
-    --text2: #874949;
-    --floatingThingWidth: 2.5vw;
-    --floatingThingHeight: 2.5vw;
+    --background: #EBEBE3;
+    --text: #292823;
+    --textAccent: #DB777B;
+    --textSecondary: #7f9291;
 }
 
 
@@ -11,57 +10,45 @@ body {
     margin: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-evenly;
+    flex-direction: column-reverse;
     height: 100vh;
     background: var(--background);
     color: var(--text);
     font-family: Roboto, sans-serif;
-    overflow: hidden;
-    position: relative;
-    border-top: 2vh solid var(--text);
-    border-bottom: 2vh solid var(--text);
-    box-sizing: border-box;
+    box-shadow:  0 1vh 0 0 var(--background) inset, 0 2vh 0 0 var(--text) inset, 0 3vh 0 0 var(--background) inset, 0 5vh 0 0 var(--text) inset,
+    0 -1vh 0 0 var(--background) inset, 0 -2vh 0 0 var(--text) inset, 0 -3vh 0 0 var(--background) inset, 0 -5vh 0 0 var(--text) inset;
     width: 100vw;
 }
 
-body:before {
-    position: absolute;
-    height: 10vw;
-    width: 10vw;
-    top: 0;
-    left: 0;
-    transform: rotate(45deg) translate(-75%);
-    background: var(--text);
-    content: " "
-}
-
-body:after {
-    position: absolute;
-    height: 10vw;
-    width: 10vw;
-    top: 100%;
-    left: 100%;
-    transform: rotate(45deg) translate(-70%);
-    background: var(--text);
-    content: " "
-}
 
 h1  {
     margin: 0 0 2vw;
-    transition: transform  ease-out 0.2s;
     user-select: none;
     position: relative;
     z-index: 1;
     font-size: 2.5vw;
+    color: var(--textAccent);
+    font-family: 'Arvo', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1vw;
+    text-align: center;
+    line-height: 1.5;
+}
+
+h1 span {
+    color: var(--textSecondary);
 }
 
 h2 {
-    font-size: 10vw;
-    text-transform: capitalize;
-    color: var(--text2);
+    margin: 10vh 0;
+    font-size: 15vw;
+    text-transform: uppercase;
+    color: var(--text);
     text-align: center;
     opacity: 0;
+    font-family: 'Imbue', serif;
+    letter-spacing: 0.5vw;
 }
 
 
