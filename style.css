@@ -52,10 +52,10 @@ h2 {
     font-family: 'Imbue', serif;
     letter-spacing: 0.5vw;
     order: 3;
+    line-height: 0.85;
 }
 
 button  {
-    margin-top: -10vh;
     order: 2;
     appearance: none;
     border: 2px solid var(--textSecondary);
