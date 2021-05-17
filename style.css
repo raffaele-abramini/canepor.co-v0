@@ -44,8 +44,9 @@ h1 span {
 }
 
 h2 {
+    user-select: none;
     margin: 10vh 0 0;
-    font-size: 15vw;
+    font-size: 13vw;
     text-transform: uppercase;
     color: var(--text);
     text-align: center;
