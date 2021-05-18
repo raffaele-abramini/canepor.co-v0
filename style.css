@@ -38,6 +38,7 @@ h1  {
     line-height: 1.5;
     order: 1;
     max-width: 100vw;
+    overflow: hidden;
     background: var(--background);
 }
 
@@ -73,7 +74,6 @@ button  {
     animation: fadeInButton 0.2s 2s forwards;
     color: var(--textSecondary);
     opacity: 0;
-    pointer-events: none;
 }
 
 button:hover:not(:disabled) {
@@ -82,6 +82,7 @@ button:hover:not(:disabled) {
 }
 
 button:disabled {
+    pointer-events: none;
     color: var(--textSecondaryWeak);
     border-color: var(--textSecondaryWeak);
     cursor: not-allowed;
