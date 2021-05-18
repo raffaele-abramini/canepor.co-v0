@@ -37,6 +37,7 @@ h1  {
     text-align: center;
     line-height: 1.5;
     order: 1;
+    max-width: 100vw;
     background: var(--background);
 }
 
