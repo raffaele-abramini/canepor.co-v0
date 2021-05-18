@@ -11,6 +11,7 @@
           --background: #EBEBE3;
           --text: #292823;
           --textAccent: #DB777B;
+          --textSecondaryStrong: rgb(93, 126, 188);
           --textSecondary: #7f9291;
           --textSecondaryWeak: #a2b1b0;
       }
@@ -25,13 +26,17 @@
           width: 100vw;
           overflow-x: hidden;
           background: var(--background);
+          background-image: url("bg.svg");
+          background-size: 40vh auto;
+          background-position: center 30%;
+          background-repeat: no-repeat;
           color: var(--text);
           box-shadow:  0 1vh 0 0 var(--background) inset, 0 2vh 0 0 var(--text) inset, 0 3vh 0 0 var(--background) inset, 0 5vh 0 0 var(--text) inset,
           0 -1vh 0 0 var(--background) inset, 0 -2vh 0 0 var(--text) inset, 0 -3vh 0 0 var(--background) inset, 0 -5vh 0 0 var(--text) inset;
       }
 
       h1  {
-          margin: 15vh 0 0;
+          margin: 7.5vh 0 0;
           user-select: none;
           position: relative;
           z-index: 1;
@@ -83,7 +88,7 @@
           padding: 1vh 2vw;
           border: none;
           font-size: 2vw;
-          margin-top: 7.5vh;
+          margin-top: 15vh;
           text-transform: uppercase;
           font-family: 'Arvo', serif;
           background: none;
