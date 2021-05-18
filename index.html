@@ -5,15 +5,152 @@
   <title>Generatore Automatico di Imprecazioni Miti</title>
   <meta name="description" content="Tenta la sorte e fatti suggerire un'imprecazione opportuna">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" type="image/jpg" href="favicon.png"/>
+  <style>
+      :root {
+          --background: #EBEBE3;
+          --text: #292823;
+          --textAccent: #DB777B;
+          --textSecondary: #7f9291;
+          --textSecondaryWeak: #a2b1b0;
+      }
+
+      body {
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column-reverse;
+          min-height: 100vh;
+          width: 100vw;
+          overflow-x: hidden;
+          background: var(--background);
+          color: var(--text);
+          box-shadow:  0 1vh 0 0 var(--background) inset, 0 2vh 0 0 var(--text) inset, 0 3vh 0 0 var(--background) inset, 0 5vh 0 0 var(--text) inset,
+          0 -1vh 0 0 var(--background) inset, 0 -2vh 0 0 var(--text) inset, 0 -3vh 0 0 var(--background) inset, 0 -5vh 0 0 var(--text) inset;
+      }
+
+      h1  {
+          margin: 15vh 0 0;
+          user-select: none;
+          position: relative;
+          z-index: 1;
+          font-size: 2.5vw;
+          color: var(--textAccent);
+          font-family: 'Arvo', serif;
+          text-transform: uppercase;
+          letter-spacing: 0.1vw;
+          text-align: center;
+          line-height: 1.5;
+          order: 1;
+          max-width: 100vw;
+          overflow: hidden;
+          background: var(--background);
+      }
+
+      h1 span {
+          color: var(--textSecondary);
+      }
+
+      h2 {
+          user-select: none;
+          margin: 10vh 0 0;
+          font-size: 13vw;
+          text-transform: uppercase;
+          color: var(--text);
+          text-align: center;
+          opacity: 0;
+          font-family: 'Imbue', serif;
+          letter-spacing: 0.5vw;
+          order: 3;
+          line-height: 0.85;
+      }
+
+      @media screen and (min-aspect-ratio: 3/2) {
+          h2 {
+              font-size: 10vw;
+          }
+      }
+      @media screen and (min-aspect-ratio: 2/1) {
+          h2 {
+              font-size: 7vw;
+          }
+      }
+
+      button  {
+          order: 2;
+          appearance: none;
+          padding: 1vh 2vw;
+          border: none;
+          font-size: 2vw;
+          margin-top: 7.5vh;
+          text-transform: uppercase;
+          font-family: 'Arvo', serif;
+          background: none;
+          cursor: pointer;
+          transition: border-color 0.2s, color 0.2s;
+          animation: fadeInButton 0.2s 2s forwards;
+          color: var(--textSecondary);
+          opacity: 0;
+      }
+
+      button:focus-visible {
+          border: none;
+          outline-color: var(--textAccent);
+      }
+
+      button:before,
+      button:after {
+          content: "ɤ";
+          opacity: 0.5;
+      }
+
+      button:hover:not(:disabled) {
+          border-color: var(--text);
+          color: var(--text);
+      }
+
+      button:disabled {
+          pointer-events: none;
+          color: var(--textSecondaryWeak);
+          border-color: var(--textSecondaryWeak);
+          cursor: not-allowed;
+      }
+
+      .active {
+          animation: fadeIn 0.25s forwards;
+      }
+
+      @keyframes fadeIn {
+          0% {
+              opacity: 0;
+              transform: scale3d(0.75, 0.75, 1);
+          }
+
+          100% {
+              opacity: 1;
+              transform: scale3d(1, 1, 1);
+          }
+      }
+      @keyframes fadeInButton {
+          0% {
+              opacity: 0;
+          }
+
+          100% {
+              opacity: 1;
+          }
+      }
+  </style>
 </head>
 <body>
   <h1>Generatore <span>•</span> Automatico<br>di <span>•</span> Imprecazioni <span>•</span> Miti</h1>
   <h2 id="target" aria-live="assertive"></h2>
   <button type="button" id="button" aria-owns="target">&nbsp;ritenta&nbsp;</button>
-  <script src="index.js"></script>
+  <script src="index.js" async></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Imbue:wght@500&family=Oranienbaum&display=swap" rel="stylesheet">
+  <link media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Imbue:wght@500&display=swap&text=ABCDEFGHILMNOPQRSTUVZ%20" rel="stylesheet">
+  <link media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap&text=GENERATORE%20%c295%20AUTOMATICO
+DI%20%c295%20IMPRECAZIONI%20%c295%20MITI%c9a4ritenta%c9a4" rel="stylesheet">
 </body>
 </html>
