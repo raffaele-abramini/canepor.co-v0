@@ -63,8 +63,9 @@ h2 {
 button  {
     order: 2;
     appearance: none;
-    border: 2px solid var(--textSecondary);
     padding: 1vh 2vw;
+    border: none;
+    font-size: 2vw;
     margin-top: 7.5vh;
     text-transform: uppercase;
     font-family: 'Arvo', serif;
@@ -74,6 +75,17 @@ button  {
     animation: fadeInButton 0.2s 2s forwards;
     color: var(--textSecondary);
     opacity: 0;
+}
+
+button:focus-visible {
+    border: none;
+    outline-color: var(--textAccent);
+}
+
+button:before,
+button:after {
+    content: "ɤ";
+    opacity: 0.5;
 }
 
 button:hover:not(:disabled) {
