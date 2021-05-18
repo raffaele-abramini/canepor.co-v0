@@ -1,5 +1,17 @@
 const fetchAndPopulate = async (target) => {
-  const data = await fetch("https://generatore-service.raff.ae/");
+  let data;
+
+  try {
+    data = await fetch("https://generatore-service.raff.ae/");
+  } catch (e) {
+    try {
+      data = await fetch("http://localhost:3000");
+    }
+    catch (e2) {
+      console.log(e);
+    }
+  }
+
   const content = await data.text();
 
   const args = JSON.parse(content);

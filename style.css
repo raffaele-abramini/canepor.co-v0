@@ -60,6 +60,17 @@ h2 {
     line-height: 0.85;
 }
 
+@media screen and (min-aspect-ratio: 3/2) {
+    h2 {
+        font-size: 10vw;
+    }
+}
+@media screen and (min-aspect-ratio: 2/1) {
+    h2 {
+        font-size: 7vw;
+    }
+}
+
 button  {
     order: 2;
     appearance: none;
