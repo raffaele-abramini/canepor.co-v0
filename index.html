@@ -10,10 +10,14 @@
       :root {
           --background: #EBEBE3;
           --text: #292823;
+          --textWeak: #45433d;
           --textAccent: #DB777B;
           --textSecondaryStrong: rgb(93, 126, 188);
           --textSecondary: #7f9291;
           --textSecondaryWeak: #a2b1b0;
+          --fontBody: 'Imbue';
+          --fontButton: 'Arvo';
+          --fontTitle: 'Rubik Mono One';
       }
 
       body {
@@ -41,8 +45,8 @@
           position: relative;
           z-index: 1;
           font-size: 2.5vw;
-          color: var(--textAccent);
-          font-family: 'Arvo', serif;
+          color: var(--textWeak);
+          font-family: var(--fontTitle), serif;
           text-transform: uppercase;
           letter-spacing: 0.1vw;
           text-align: center;
@@ -65,38 +69,28 @@
           color: var(--text);
           text-align: center;
           opacity: 0;
-          font-family: 'Imbue', serif;
+          font-family: var(--fontBody), serif;
           letter-spacing: 0.5vw;
           order: 3;
           line-height: 0.85;
       }
 
-      @media screen and (min-aspect-ratio: 3/2) {
-          h2 {
-              font-size: 10vw;
-          }
-      }
-      @media screen and (min-aspect-ratio: 2/1) {
-          h2 {
-              font-size: 7vw;
-          }
-      }
 
       button  {
           order: 2;
           appearance: none;
           padding: 1vh 2vw;
           border: none;
-          font-size: 2vw;
+          font-size: 1.5vw;
           margin-top: 15vh;
           text-transform: uppercase;
-          font-family: 'Arvo', serif;
+          font-family: var(--fontButton), serif;
           background: none;
           cursor: pointer;
           user-select: none;
           transition: border-color 0.2s, color 0.2s;
           animation: fadeInButton 0.2s 2s forwards;
-          color: var(--textSecondary);
+          color: var(--textAccent);
           opacity: 0;
       }
 
@@ -121,6 +115,25 @@
           color: var(--textSecondaryWeak);
           border-color: var(--textSecondaryWeak);
           cursor: not-allowed;
+      }
+
+      @media screen and (max-width: 1000px) {
+          button {
+              font-size: 20px;
+          }
+      }
+      @media screen and (min-aspect-ratio: 3/2) {
+          h2 {
+              font-size: 10vw;
+          }
+          h1 {
+              font-size: 2vw;
+          }
+      }
+      @media screen and (min-aspect-ratio: 2/1) {
+          h2 {
+              font-size: 7vw;
+          }
       }
 
       .active {
@@ -156,7 +169,8 @@
   <script src="index.js" async></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Imbue:wght@500&display=swap&text=ABCDEFGHILMNOPQRSTUVZ%20" rel="stylesheet">
-  <link media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap&text=GENERATORE%20%c295%20AUTOMATICO
-DI%20%c295%20IMPRECAZIONI%20%c295%20MITI%c9a4ritenta%c9a4" rel="stylesheet">
+  <link media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap&text=%c9a4RITENTA%c9a4" rel="stylesheet">
+  <link media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap&text=GENERATORE%20%c295%20AUTOMATICO
+DI%20%c295%20IMPRECAZIONI%20%c295%20MITI" rel="stylesheet">
 </body>
 </html>
